@@ -1,11 +1,50 @@
+function changeValue() {
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var d = new Date();
+var day = days[d.getDay()];
+var hr = d.getHours();
+var min = d.getMinutes();
+var sec = d.getSeconds();
+if (min < 10) {
+    min = "0" + min;
+}
+var ampm = "am";
+if( hr > 12 ) {
+    hr -= 12;
+    ampm = "pm";
+}
+var date = d.getDate();
+var month = months[d.getMonth()];
+var year = d.getFullYear();
+var x = document.getElementById("time");
+    document.getElementById("demo").innerHTML = day + " " + hr + ":" + min + ":" + sec + ampm + " " + date + " " + month + " " + year;;
+}
+
+var timerInterval = null;
+
+function start() {
+
+    stop();
+    value = 0;
+    timerInterval = setInterval(changeValue, 1000);
+}
+var stop = function() {
+    clearInterval(timerInterval);
+}
+
+
+
+
+
 const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
 const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
 
-const db = firebase.database();
+// const db = firebase.database();
 
 
 
-const starter = () => {
+
   const keys = document.querySelectorAll('.key')
 const whiteKeys = document.querySelectorAll('.key.white')
 const blackKeys = document.querySelectorAll('.key.black')
@@ -31,8 +70,4 @@ function playNote(key) {
   noteAudio.addEventListener('ended', () => {
     key.classList.remove('active')
   })
-}
-}
-const stoper = () => {
-
 }
