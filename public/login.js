@@ -32,6 +32,7 @@ const googler = () => {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
+        window.location.href = 'index-g.html';
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
