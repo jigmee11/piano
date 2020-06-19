@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    height: 100vh;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.piano{
+    position: absolute;
+    bottom: 10px;
+    width: 448px;
+    height: 33.333%;
+    display: flex;
+}
+.white{
+    width: 64px;
+    height: 100%;
+    border: 2px solid black;
+}
+.black{
+    background-color: black;
+    width: 24px;
+    height: 200px;
+    position: absolute;
+}
+#c{
+    left: 52px;
+}
+#d{
+    left: 116px
+}
+#f{
+    left: 244px;
+}
+#g{
+    left: 308px;
+}
+#a{
+    left: 372px;
+}
