@@ -34,4 +34,10 @@
     margin-right: calc(var(--width) / -2);
     z-index: 2;
   }
-  
+  body{
+    background-color: darkslategrey;
+  }
+.history{
+    width: 200px;
+    height: 100px;
+}
