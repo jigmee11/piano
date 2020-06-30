@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <style>
+        *{
+             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }       
+        #canvas {
+            border: 2px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="draw.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    window.addEventListener("load", () => {
+    const canvas=document.querySelector("#canvas")
+    const ctx = canvas.getContext("2d");
+    canvas.height=window.innerHeight;
+    canvas.width=window.innerWidth;
+    let painting=false;
+
+    function startPosition (e) {
+        painting = true;
+        draw(e);
+    }
+    function finishedPosition() {
+        painting = false;
+        ctx.beginPath();
+    }
+    function draw (e) {
+        if(!painting) return;
+        ctx.lineWidth=10;
+        ctx.lineCap="round";
+        ctx.strokeStyle= "deeppink" ;
+        ctx.lineTo(e.clientX,e.clientY);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.lineTo(e.clientX,e.clientY);
+    }
+    canvas.addEventListener("mousedown",startPosition);
+    canvas.addEventListener("mouseup",finishedPosition);
+    canvas.addEventListener("mousemove",draw);
+})
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <style>
+        *{
+             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }       
+        #canvas {
+            border: 2px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="draw.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    window.addEventListener("load", () => {
+    const canvas=document.querySelector("#canvas")
+    const ctx = canvas.getContext("2d");
+    canvas.height=window.innerHeight;
+    canvas.width=window.innerWidth;
+    let painting=false;
+
+    function startPosition (e) {
+        painting = true;
+        draw(e);
+    }
+    function finishedPosition() {
+        painting = false;
+        ctx.beginPath();
+    }
+    function draw (e) {
+        if(!painting) return;
+        ctx.lineWidth=10;
+        ctx.lineCap="round";
+        ctx.strokeStyle= "deeppink" ;
+        ctx.lineTo(e.clientX,e.clientY);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.lineTo(e.clientX,e.clientY);
+    }
+    canvas.addEventListener("mousedown",startPosition);
+    canvas.addEventListener("mouseup",finishedPosition);
+    canvas.addEventListener("mousemove",draw);
+})
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <style>
+        *{
+             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }       
+        #canvas {
+            border: 2px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="draw.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    window.addEventListener("load", () => {
+    const canvas=document.querySelector("#canvas")
+    const ctx = canvas.getContext("2d");
+    canvas.height=window.innerHeight;
+    canvas.width=window.innerWidth;
+    let painting=false;
+
+    function startPosition (e) {
+        painting = true;
+        draw(e);
+    }
+    function finishedPosition() {
+        painting = false;
+        ctx.beginPath();
+    }
+    function draw (e) {
+        if(!painting) return;
+        ctx.lineWidth=10;
+        ctx.lineCap="round";
+        ctx.strokeStyle= "deeppink" ;
+        ctx.lineTo(e.clientX,e.clientY);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.lineTo(e.clientX,e.clientY);
+    }
+    canvas.addEventListener("mousedown",startPosition);
+    canvas.addEventListener("mouseup",finishedPosition);
+    canvas.addEventListener("mousemove",draw);
+})
+</script>
+</html>
